@@ -74,3 +74,9 @@ Select
 	Country As País
 From Customers
 where Country != 'Brazil'
+
+select distinct(Country) as [Lista de Paises] from Customers Order By Country
+
+select productname, supplierid, unitprice
+from products
+where unitprice >= 31
