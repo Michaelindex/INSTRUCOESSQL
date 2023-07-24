@@ -72,5 +72,5 @@ Select
 	CompanyName As Empresa, 
 	ContactName  As Contato,
 	Country As País
-From Customers 
-Where Country='Brazil' or Country ='Argentina'
+From Customers
+where Country != 'Brazil'
