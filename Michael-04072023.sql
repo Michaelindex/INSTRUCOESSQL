@@ -84,3 +84,21 @@ where unitprice > 0
 select territoryid, territorydescription
 from territories
 where territoryid between 90000 and 100000
+
+select * from Products
+
+select UnitPrice 
+from Products
+where UnitPrice > 10
+
+select ProductId 
+from Products
+where ProductId <> 1
+
+select ProductId 
+from Products
+where ProductId between 10 and 40
+
+select ProductId 
+from Products
+where ProductId != 10
