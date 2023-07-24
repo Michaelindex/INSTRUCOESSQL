@@ -47,3 +47,30 @@ select
 	UnitsInStock As Estoque,
 	UnitsInStock * UnitPrice As [Valor do Estoque]
 From Products
+
+-- Usando Concatenação
+Select concat(firstname, lastname) From Employees
+
+Select concat(firstname, ' mora em ', city) From Employees
+
+Select concat(ProductName, ' tem ', UnitsInStock, ' unidades no estoque') From Products
+
+Select concat(ProductName, ' vale ', UnitsInStock*UnitPrice, ' reais, com base no seu estoque') From Products
+
+--Usando distinções – Filtrando valores repetidos
+Select  TitleOfCourtesy From employees
+Select  distinct(TitleOfCourtesy) From employees
+Select distinct(OrderDate) from Orders
+
+-- Usando Where para Filtrar
+Select territoryDescription From territories Where Regionid = 3
+Select lastname From employees Where firstname = 'Laura'
+Select orderid,customerid From orders Where shippeddate= '1996-16-07 00:00:00.000';
+
+-- Filtrando os Clientes do Brasil ou Argentina
+Select 
+	CompanyName As Empresa, 
+	ContactName  As Contato,
+	Country As País
+From Customers 
+Where Country='Brazil' or Country ='Argentina'
