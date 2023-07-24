@@ -80,3 +80,7 @@ select distinct(Country) as [Lista de Paises] from Customers Order By Country
 select productname, supplierid, unitprice
 from products
 where unitprice > 0 
+
+select territoryid, territorydescription
+from territories
+where territoryid between 90000 and 100000
