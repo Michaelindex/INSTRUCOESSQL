@@ -119,3 +119,7 @@ select CategoryID, ProductName
 from Products
 where CategoryID in (1,2,3,7)
 order by CategoryID
+
+select * 
+from Orders
+where ShipCountry in ('Brazil', 'France', 'Germany')
