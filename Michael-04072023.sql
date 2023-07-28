@@ -124,3 +124,8 @@ select *
 from Orders
 where ShipCountry in ('Brazil', 'France', 'Germany')
 order by ShipCountry
+
+select lastname, hiredate
+from Employees
+where lastname like 'SU%' and 
+hiredate like '%1993%'
