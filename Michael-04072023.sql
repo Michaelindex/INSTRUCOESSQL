@@ -108,7 +108,7 @@ from products
 where productname like '___s%'
 
 select firstname, city, region
-from employess
+from Employees
 where region is null
 
 select ContactName
