@@ -102,3 +102,11 @@ where ProductId between 10 and 40
 select ProductId 
 from Products
 where ProductId != 10
+
+select productname
+from products
+where productname like '___s%'
+
+select firstname, city, region
+from employess
+where region is null
