@@ -110,3 +110,4 @@ where productname like '___s%'
 select firstname, city, region
 from employess
 where region is null
+
