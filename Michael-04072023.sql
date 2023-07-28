@@ -123,3 +123,4 @@ order by CategoryID
 select * 
 from Orders
 where ShipCountry in ('Brazil', 'France', 'Germany')
+order by ShipCountry
