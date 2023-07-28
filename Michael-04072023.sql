@@ -129,3 +129,11 @@ select lastname, hiredate
 from Employees
 where lastname like 'SU%' and 
 hiredate like '%1993%'
+
+select CategoryID, categoryname, description
+from Categories
+where categoryid = 1 or categoryid = 3
+
+select shipperid, companyname, phone
+from Shippers
+where not shipperid = 2
