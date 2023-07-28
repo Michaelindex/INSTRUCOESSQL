@@ -115,3 +115,7 @@ select ContactName
 from Customers
 where ContactName like 'D%'
 
+select CategoryID, ProductName
+from Products
+where CategoryID in (1,2,3,7)
+order by CategoryID
