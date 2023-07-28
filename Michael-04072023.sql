@@ -111,3 +111,7 @@ select firstname, city, region
 from employess
 where region is null
 
+select ContactName
+from Customers
+where ContactName like 'D%'
+
