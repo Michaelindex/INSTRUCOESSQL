@@ -137,3 +137,44 @@ where categoryid = 1 or categoryid = 3
 select shipperid, companyname, phone
 from Shippers
 where not shipperid = 2
+
+--Selecione o territorydescription que tem o territoryid > 2 e que tenha o territorydescription iniciado pela letra a
+select TerritoryDescription
+from Territories
+where TerritoryID > 2 and TerritoryDescription like 'A%'
+
+--Selecione a company name da tabela shippers que tenham os shipperid 1 ou 3
+select CompanyName
+from Shippers
+where ShipperID = 1 or ShipperID = 3
+
+--Selecione o regiondescription da tabela region menos do regionid de numero 3
+select RegionDescription
+from Region
+where RegionID <> 3
+
+--Selecione Nome e Sobrenome de forma decrescente da data de contratação dos funcionarios
+select FirstName, LastName, HireDate
+from Employees
+order by HireDate desc
+
+--Selecione o nome dos produtos de forma NÃO alfabética
+select ProductID, ProductName
+from Products
+order by ProductName desc
+
+--Selecione tudo de orders e ordene de forma decrescente o employeeID
+select * 
+from Orders
+order by EmployeeID desc
+
+--Selecionar produtos com preço de 12 até 30 ordenados do menor para o maior preço
+select productname, unitprice
+from products
+where unitprice > 12 and unitprice < 30
+order by unitprice
+
+--Selecionar terrirótios em ordem alfabética
+select TerritoryDescription
+from territories
+order by territoryDescription
