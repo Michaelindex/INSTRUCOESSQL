@@ -178,3 +178,28 @@ order by unitprice
 select TerritoryDescription
 from territories
 order by territoryDescription
+
+--Mostre o lastname de todos os empregados orgenado por ordem cerscente
+select LastName
+from Employees
+order by LastName desc
+
+--Mostre todas as orderid da tabela orders ordenadas pela orderdate em ordem descrecente
+select OrderDate, OrderID
+from Orders
+order by OrderDate desc
+
+--Mostre os productname e as categoryid da tabela products ordenados pela categoryid e pelo productname
+select ProductName, CategoryID
+from Products
+order by CategoryID, ProductName
+
+--Mostre os productname e as categoryid da tabela products ordenados pelo productname e pela categoryid em ordem decrescente
+select ProductName, CategoryID
+from Products
+order by CategoryID desc, ProductName desc
+
+--Mostre os campos supplierid, companyname e city ordenados pelo companyname( usando numero da coluna).
+select SupplierID, CompanyName, City
+from Suppliers
+order by CompanyName
