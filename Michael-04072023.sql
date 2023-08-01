@@ -200,6 +200,38 @@ from Products
 order by CategoryID desc, ProductName desc
 
 --Mostre os campos supplierid, companyname e city ordenados pelo companyname( usando numero da coluna).
-select SupplierID, CompanyName, City
+select SupplierID,CompanyName,City
 from Suppliers
 order by CompanyName
+
+--Selecione o Freight mais caro da tabela orders
+select max(Freight)
+from Orders 
+
+--Faça uma somatória de todos os itens quantity da tabela order details
+select sum(Quantity)
+from [Order Details]
+
+--Fala uma contagem de quantos orderid foram feitos
+select count(OrderID)
+from [Order Details]
+
+--Calcule o preço médio dos unitprice
+select avg(unitprice) 
+from [Order Details]
+
+--Mostre a hiredate do funcionario mais velho da empresa
+select min(HireDate) as 'Funcionario mais velho'
+from Employees
+
+--Selecione todos os colaboradores que ganham um salário acima da média salarial
+select FirstName, Salary
+from Employees
+where Salary > 
+(select avg(Salary)
+from Employees)
+
+--Selecione os pedidos feitos por Brasileiros e Franceses
+select * 
+from Orders
+where ShipCountry = 'Brazil' or ShipCountry = 'France'
