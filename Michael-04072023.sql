@@ -235,3 +235,18 @@ from Employees)
 select * 
 from Orders
 where ShipCountry = 'Brazil' or ShipCountry = 'France'
+
+--Selecione 3 tabelas e crie a tabela nem com o primeiro e o segundo nome no mesmo lugar
+select
+	EmployeeID,
+	name = firstname + ' ' + lastname,
+	title
+from employees
+where not employeeID = 5
+
+--Selecione a tabela companyname e o fax, mas fax deve ficar vazio
+select
+	companyname,
+	fax
+from suppliers
+where fax is null
