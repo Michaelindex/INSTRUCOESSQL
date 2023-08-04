@@ -251,6 +251,7 @@ select
 from suppliers
 where fax is null
 
+--Selecione todos os produtos em ordem crescente de estoque
 select 
 	*
 from Products
