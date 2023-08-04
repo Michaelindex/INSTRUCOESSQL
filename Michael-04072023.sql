@@ -250,3 +250,8 @@ select
 	fax
 from suppliers
 where fax is null
+
+select 
+	*
+from Products
+order by UnitsInStock
