@@ -260,3 +260,8 @@ order by UnitsInStock
 Select customerid, sum(Freight)
 from orders
 group by customerid
+
+select customerid, sum(freight)
+from orders
+group by customerid
+having sum (freight) > 40
