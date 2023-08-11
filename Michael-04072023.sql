@@ -285,3 +285,5 @@ select orderid as pedido, sum(unitprice) as soma dos precos
 from order details
 group by orderid
 having sum(unitprice) > 200
+
+
