@@ -286,4 +286,7 @@ from order details
 group by orderid
 having sum(unitprice) > 200
 
-
+select shipvia, sum(freight)
+from orders
+group by shipvia
+order by sum(freight) desc
