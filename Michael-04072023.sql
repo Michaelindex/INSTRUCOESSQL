@@ -275,3 +275,8 @@ select productid as produto, sum(quantitu) as vendido
 from order details
 group by productid
 having sum(quantity) > 500
+
+select employeeID as colaborador, count(*) as pedidos feitos
+from orders
+group by employeeID
+order by employeeID desc
