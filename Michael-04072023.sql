@@ -267,3 +267,6 @@ group by customerid
 having sum (freight) > 40
 order by customerid desc
 
+select categoryid as categoria, sum(unitsinstock) as estoque
+from products
+group by categoryid
