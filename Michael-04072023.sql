@@ -270,3 +270,8 @@ order by customerid desc
 select categoryid as categoria, sum(unitsinstock) as estoque
 from products
 group by categoryid
+
+select productid as produto, sum(quantitu) as vendido
+from order details
+group by productid
+having sum(quantity) > 500
