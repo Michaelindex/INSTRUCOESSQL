@@ -10,28 +10,28 @@ select * from Categories
 --Selecionar o ID e o name da Categoria PESQUISA2
 select CategoryID, CategoryName from Categories
 
---Selecionar região PESQUISA3
+--Selecionar regiï¿½o PESQUISA3
 select * from Region
 
---Selecionar o Território PESQUISA4
+--Selecionar o Territï¿½rio PESQUISA4
 select * from Territories
 
 --Selecionar Produtos PESQUISA5
 select * from Products
 
---Selecionando o preço de 12 produtos ( cada produto da lista )
+--Selecionando o preï¿½o de 12 produtos ( cada produto da lista )
 select ProductName, UnitPrice, UnitPrice * 12 From Products
 
---Diminuindo 20% o preço dos produtos
+--Diminuindo 20% o preï¿½o dos produtos
 select ProductName, UnitPrice, UnitPrice * 0.8 From Products
 
---Somar o preço do produto PESQUISA1
+--Somar o preï¿½o do produto PESQUISA1
 select ProductName, UnitPrice, UnitPrice + 15 From Products
 
---Subtrair o preço do produto PESQUISA2
+--Subtrair o preï¿½o do produto PESQUISA2
 select ProductName, UnitPrice, UnitPrice -15 From Products
 
---Divisão do produto PESQUISA3
+--Divisï¿½o do produto PESQUISA3
 select ProductName, UnitPrice, UnitPrice / 5 From Products
 
 --Aumentando o Estoque em 50 unidades para cada produto
@@ -43,12 +43,12 @@ From Products
 
 select
 	ProductName As Produto,
-	UnitPrice As [Preço],
+	UnitPrice As [Preï¿½o],
 	UnitsInStock As Estoque,
 	UnitsInStock * UnitPrice As [Valor do Estoque]
 From Products
 
--- Usando Concatenação
+-- Usando Concatenaï¿½ï¿½o
 Select concat(firstname, lastname) From Employees
 
 Select concat(firstname, ' mora em ', city) From Employees
@@ -57,7 +57,7 @@ Select concat(ProductName, ' tem ', UnitsInStock, ' unidades no estoque') From P
 
 Select concat(ProductName, ' vale ', UnitsInStock*UnitPrice, ' reais, com base no seu estoque') From Products
 
---Usando distinções – Filtrando valores repetidos
+--Usando distinï¿½ï¿½es ï¿½ Filtrando valores repetidos
 Select  TitleOfCourtesy From employees
 Select  distinct(TitleOfCourtesy) From employees
 Select distinct(OrderDate) from Orders
@@ -71,7 +71,7 @@ Select orderid,customerid From orders Where shippeddate= '1996-16-07 00:00:00.00
 Select 
 	CompanyName As Empresa, 
 	ContactName  As Contato,
-	Country As País
+	Country As Paï¿½s
 From Customers
 where Country != 'Brazil'
 
@@ -153,12 +153,12 @@ select RegionDescription
 from Region
 where RegionID <> 3
 
---Selecione Nome e Sobrenome de forma decrescente da data de contratação dos funcionarios
+--Selecione Nome e Sobrenome de forma decrescente da data de contrataï¿½ï¿½o dos funcionarios
 select FirstName, LastName, HireDate
 from Employees
 order by HireDate desc
 
---Selecione o nome dos produtos de forma NÃO alfabética
+--Selecione o nome dos produtos de forma Nï¿½O alfabï¿½tica
 select ProductID, ProductName
 from Products
 order by ProductName desc
@@ -168,13 +168,13 @@ select *
 from Orders
 order by EmployeeID desc
 
---Selecionar produtos com preço de 12 até 30 ordenados do menor para o maior preço
+--Selecionar produtos com preï¿½o de 12 atï¿½ 30 ordenados do menor para o maior preï¿½o
 select productname, unitprice
 from products
 where unitprice > 12 and unitprice < 30
 order by unitprice
 
---Selecionar terrirótios em ordem alfabética
+--Selecionar terrirï¿½tios em ordem alfabï¿½tica
 select TerritoryDescription
 from territories
 order by territoryDescription
@@ -208,7 +208,7 @@ order by CompanyName
 select max(Freight)
 from Orders 
 
---Faça uma somatória de todos os itens quantity da tabela order details
+--Faï¿½a uma somatï¿½ria de todos os itens quantity da tabela order details
 select sum(Quantity)
 from [Order Details]
 
@@ -216,7 +216,7 @@ from [Order Details]
 select count(OrderID)
 from [Order Details]
 
---Calcule o preço médio dos unitprice
+--Calcule o preï¿½o mï¿½dio dos unitprice
 select avg(unitprice) 
 from [Order Details]
 
@@ -224,7 +224,7 @@ from [Order Details]
 select min(HireDate) as 'Funcionario mais velho'
 from Employees
 
---Selecione todos os colaboradores que ganham um salário acima da média salarial
+--Selecione todos os colaboradores que ganham um salï¿½rio acima da mï¿½dia salarial
 select FirstName, Salary
 from Employees
 where Salary > 
@@ -256,3 +256,7 @@ select
 	*
 from Products
 order by UnitsInStock
+
+Select customerid, sum(Freight)
+from orders
+group by customerid
