@@ -265,3 +265,5 @@ select customerid, sum(freight)
 from orders
 group by customerid
 having sum (freight) > 40
+order by customerid desc
+
