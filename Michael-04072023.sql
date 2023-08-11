@@ -280,3 +280,8 @@ select employeeID as colaborador, count(*) as pedidos feitos
 from orders
 group by employeeID
 order by employeeID desc
+
+select orderid as pedido, sum(unitprice) as soma dos precos
+from order details
+group by orderid
+having sum(unitprice) > 200
