@@ -290,3 +290,7 @@ select shipvia, sum(freight)
 from orders
 group by shipvia
 order by sum(freight) desc
+
+
+--ABAIXO BANCO DE DADOS CRIADO - bcoLivraria
+
