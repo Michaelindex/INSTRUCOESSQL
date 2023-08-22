@@ -353,3 +353,10 @@ values
 select * from tbl_livrosautores
 
 select * from tbl_editoras where id_Editora = 11
+delete from tbl_editoras where id_Editora = 11
+
+select * from tbl_livros
+
+update tbl_livros
+set NomeLivro = 'SSH, o Shell Seguro'
+where idlivro = 101
