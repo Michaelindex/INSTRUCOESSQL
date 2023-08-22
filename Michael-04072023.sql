@@ -294,9 +294,13 @@ order by sum(freight) desc
 
 --ABAIXO BANCO DE DADOS CRIADO - bcoLivraria
 delete * from tbl_assuntos
-delete * from tbl_assuntos
 delete * from tbl_autores
 delete * from tbl_editoras
 delete * from tbl_livros
 delete * from tbl_livrosautores
+
+dbcc checkident ('tbl_assuntos', RESEED, 0)
+dbcc checkident ('tbl_autores', RESEED, 0)
+dbcc checkident ('tbl_editoras', RESEED, 0)
+dbcc checkident ('tbl_livros', RESEED, 0)
 
