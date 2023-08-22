@@ -310,3 +310,13 @@ values
 ('leahciM','sotnaS'),('sotnaS','leahciM'),('leaciM','setnaS'),('mociaM','motnaS')
 
 select * from tbl_autores
+
+insert into tbl_editoras(NomeEditora)
+values
+('Prentice Hall'),('O´Reilly'),
+('Microsoft Press'),('Wiley'),
+('Mc Graw Hill'),('Bookman'),
+('Novatec'),('Apress'),
+('Sybex'),('Mike Murach and Associates')
+
+select * from tbl_editoras
