@@ -325,9 +325,9 @@ insert into tbl_assuntos(Assunto)
 values
 ('Ficcao'),('Botanica'),('Eletronica'),('Matematica'),('aventura'),('Literatura'),('Informatica'),('Suspense');
 
-select * from tbl_assuntos
+select * from tbl_livros
 
-INSERT INTO tbl_Livros (NomeLivro, ISBN13, DataPub, PrecoLivro, NumeroPaginas, IdAssunto, 
+INSERT INTO tbl_livros (NomeLivro, ISBN13, DataPub, PrecoLivro, NumeroPaginas, IdAssunto, 
 IdEditora)
 VALUES
 ('Linux Command Line and Shell Scripting','9781118983843', '20150109', 165.55, 816, 7, 4),
@@ -337,3 +337,5 @@ VALUES
 ('Windows Server 2012 Inside Out','9780735666313', '20130125', 179.51, 1584, 7, 3),
 ('Murach´s MySQL','9781943872367', '20190501', 227.64, 650, 7, 10),
 ('Practical Electronics for Inventors', '9781259587542', '20160711', 119.58, 1056, 3, 5);
+
+delete from tbl_livros
