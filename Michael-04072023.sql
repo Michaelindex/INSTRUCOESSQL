@@ -339,3 +339,15 @@ VALUES
 ('Practical Electronics for Inventors', '9781259587542', '20160711', 119.58, 1056, 3, 5);
 
 delete from tbl_livros
+
+insert into tbl_LivrosAutores (IdLivro, IdAutor)
+values
+(100,5),(100,6),
+(101,1),(101,7),(101,8),
+(102,2),(102,9),(102,10),
+(103,11),(103,12),
+(104,4),
+(105,13),
+(106,14),(106,15)
+
+select * from tbl_livrosautores
