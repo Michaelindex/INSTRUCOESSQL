@@ -296,7 +296,7 @@ order by sum(freight) desc
 delete * from tbl_assuntos
 delete * from tbl_autores
 delete * from tbl_editoras
-delete * from tbl_livros
+delete from tbl_livros
 delete * from tbl_livrosautores
 
 dbcc checkident ('tbl_assuntos', RESEED, 0)
@@ -326,3 +326,14 @@ values
 ('Ficcao'),('Botanica'),('Eletronica'),('Matematica'),('aventura'),('Literatura'),('Informatica'),('Suspense');
 
 select * from tbl_assuntos
+
+INSERT INTO tbl_Livros (NomeLivro, ISBN13, DataPub, PrecoLivro, NumeroPaginas, IdAssunto, 
+IdEditora)
+VALUES
+('Linux Command Line and Shell Scripting','9781118983843', '20150109', 165.55, 816, 7, 4),
+('SSH, the Secure Shell','9780596008956', '20050517', 295.41, 672, 7, 2),
+('Using Samba','9780596002565', '20031221', 158.76, 449, 7, 2),
+('A Arte da Eletrônica', '9788582604342', '20170308', 176.71, 1160, 7, 6),
+('Windows Server 2012 Inside Out','9780735666313', '20130125', 179.51, 1584, 7, 3),
+('Murach´s MySQL','9781943872367', '20190501', 227.64, 650, 7, 10),
+('Practical Electronics for Inventors', '9781259587542', '20160711', 119.58, 1056, 3, 5);
