@@ -351,3 +351,5 @@ values
 (106,14),(106,15)
 
 select * from tbl_livrosautores
+
+select * from tbl_editoras where id_Editora = 11
