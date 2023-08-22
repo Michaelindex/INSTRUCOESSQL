@@ -302,7 +302,7 @@ delete * from tbl_livrosautores
 dbcc checkident ('tbl_assuntos', RESEED, 0)
 dbcc checkident ('tbl_autores', RESEED, 0)
 dbcc checkident ('tbl_editoras', RESEED, 0)
-dbcc checkident ('tbl_livros', RESEED, 0)
+dbcc checkident ('tbl_livros', RESEED, 99)
 
 insert into tbl_autores(NomeAutor, SobrenomeAutor)
 values
@@ -320,3 +320,9 @@ values
 ('Sybex'),('Mike Murach and Associates')
 
 select * from tbl_editoras
+
+insert into tbl_assuntos(Assunto)
+values
+('Ficcao'),('Botanica'),('Eletronica'),('Matematica'),('aventura'),('Literatura'),('Informatica'),('Suspense');
+
+select * from tbl_assuntos
