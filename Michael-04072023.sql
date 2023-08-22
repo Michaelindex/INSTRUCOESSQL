@@ -304,3 +304,9 @@ dbcc checkident ('tbl_autores', RESEED, 0)
 dbcc checkident ('tbl_editoras', RESEED, 0)
 dbcc checkident ('tbl_livros', RESEED, 0)
 
+insert into tbl_autores(NomeAutor, SobrenomeAutor)
+values
+('Michael','Santos'),('Santos','Michael'),('Micael','Santes'),('Maicom','Santom'),
+('leahciM','sotnaS'),('sotnaS','leahciM'),('leaciM','setnaS'),('mociaM','motnaS')
+
+select * from tbl_autores
