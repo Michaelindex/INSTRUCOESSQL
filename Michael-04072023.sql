@@ -360,3 +360,17 @@ select * from tbl_livros
 update tbl_livros
 set NomeLivro = 'SSH, o Shell Seguro'
 where idlivro = 101
+
+
+--BANCO DE DADOS CHICO
+create table compras(
+idcom int primary key not null,
+vendedor varchar(50) not null,
+quantidade int not null
+)
+
+create table fabrica(
+idfab int primary key not null,
+nomeFabrica varchar(15) not null,
+itensFabricados varchar(10) not null
+)
