@@ -364,13 +364,17 @@ where idlivro = 101
 
 --BANCO DE DADOS CHICO
 create table compras(
-idcom int primary key not null,
-vendedor varchar(50) not null,
-quantidade int not null
+codcom smallint primary key not null identity(1,1),
+valortotal float not null,
+[data] int not null,
+hora time not null,
+codfor int not null,
 )
 
-create table fabrica(
-idfab int primary key not null,
-nomeFabrica varchar(15) not null,
-itensFabricados varchar(10) not null
+create table itenscompras(
+itecod smallint primary key not null identity(1,1),
+qtd int not null,
+valor float not null,
+codcom smallint not null,
+codpro int not null,
 )
